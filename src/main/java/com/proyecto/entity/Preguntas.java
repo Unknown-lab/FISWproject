@@ -1,10 +1,15 @@
-package com.proyecto.model;
+package com.proyecto.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.IdClass;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 
-@Entity
+@Entity @IdClass(PreguntasId.class)
+@Table(name="preguntas")
 public class Preguntas {
 	
 	@Id
@@ -14,7 +19,16 @@ public class Preguntas {
 	@Column
 	private String descripcion;
 	
+	@ManyToOne
+	private Formulario formulario;
 	
+	
+	public Formulario getFormulario() {
+		return formulario;
+	}
+	public void setFormulario(Formulario formulario) {
+		this.formulario = formulario;
+	}
 	public int getId_formulario() {
 		return id_formulario;
 	}
