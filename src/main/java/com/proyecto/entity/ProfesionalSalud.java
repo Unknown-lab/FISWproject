@@ -13,15 +13,11 @@ import java.util.List;
 @Table(name="profesional_salud")
 public class ProfesionalSalud {
 	
-	@Id
-	private String rut;
-	@Column(name="nombre")
-	private String nombre;
-	@Column(name="labor")
-	private String labor;
+	@Id private String rut;
+	@Column(name="nombre") private String nombre;
+	@Column(name="labor") private String labor;
 	@OneToMany(mappedBy="profesionalSalud")
-	private List<Formulario> formulario;  //aqui es donde se guardaran los formularios que
-	//que tiene asociado este rut, para hacer un get más rapido en un join
+	private List<Formulario> formulario;  //aqui es donde se guardaran los formularios que tiene asociado este rut, para hacer un get más rapido en un join
 	
 	public ProfesionalSalud(String rut, String nombre, String labor, List<Formulario> formulario) {
 		super();

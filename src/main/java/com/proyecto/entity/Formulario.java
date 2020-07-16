@@ -23,10 +23,9 @@ public class Formulario {
 	
 	@ManyToOne
 	@JoinColumn(name="rut")
-	private ProfesionalSalud profesionalSalud; //me toma al profesional de salud
-	//que creo el formulario de id= x
+	private ProfesionalSalud profesionalSalud; //me toma al profesional de salud que creo el formulario de id= x
 	
-	@OneToMany(mappedBy="id_formulario")
+	@OneToMany(mappedBy="preguntas_id.id_formulario")
 	private List<Preguntas> preguntas; 
 
 	
