@@ -1,12 +1,12 @@
-/*
-package com.proyecto.controller;
+
+package com.proyecto.demo.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import com.proyecto.entity.ProfesionalSalud;
-import com.proyecto.repo.IProSaludRepo;
+import com.proyecto.demo.entity.ProfesionalSalud;
+import com.proyecto.demo.repo.IProSaludRepo;
 
 
 @Controller
@@ -15,16 +15,32 @@ public class DemoController {
 	@Autowired
 	private IProSaludRepo repo;
 	
-	@GetMapping("/home") 
+	@GetMapping("/")
 	public String home() {
 		//insercion de datos cuando valla a esta direccion en la pagina web
 		ProfesionalSalud ps=new ProfesionalSalud("19884119","Sebastian","Cirujano");
 		repo.save(ps);
-		return "home";
+		return "/home"; //url
 	}
 }
-*/
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 package com.proyecto.controller;
 import java.util.*;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -72,3 +88,4 @@ public class DemoController {
 		return repo.findByRut(rut);
 	}
 }
+*/

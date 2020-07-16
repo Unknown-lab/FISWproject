@@ -1,4 +1,4 @@
-package com.proyecto.entity;
+package com.proyecto.demo.entity;
 
 import javax.persistence.Column;
 import javax.persistence.EmbeddedId;

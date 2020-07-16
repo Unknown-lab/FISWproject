@@ -1,4 +1,4 @@
-package com.proyecto.entity;
+package com.proyecto.demo.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -19,12 +19,14 @@ public class ProfesionalSalud {
 	@OneToMany(mappedBy="profesionalSalud")
 	private List<Formulario> formulario;  //aqui es donde se guardaran los formularios que tiene asociado este rut, para hacer un get más rapido en un join
 	
-	public ProfesionalSalud(String rut, String nombre, String labor, List<Formulario> formulario) {
+	public ProfesionalSalud() {
+	}
+	
+	public ProfesionalSalud(String rut, String nombre, String labor) {
 		super();
 		this.rut = rut;
 		this.nombre = nombre;
 		this.labor = labor;
-		this.formulario = formulario;
 	}
 	
 	
